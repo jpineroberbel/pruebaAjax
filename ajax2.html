@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div>
+<h1 id="demo">The XMLHttpRequest Object</h1>
+<button type="button" onclick="loadDoc()">Change Content</button>
+</div>
+
+<script>
+function loadDoc() {
+
+  fetch("https://www.omdbapi.com/?i=tt3896198&apikey=b8d85a5").then( (d)=>d.json()).then ( (d)=> console.log(d));
+}
+</script>
+
+</body>
+</html>
