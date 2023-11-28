@@ -9,15 +9,8 @@
 
 <script>
 function loadDoc() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-    // Recibo la respuesta
-      document.getElementById("demo").innerHTML = this.responseText;
-    }
-  };
-  xhttp.open("GET", "prueba.txt", true);
-  xhttp.send();
+
+  fetch("https://www.omdbapi.com/?i=tt3896198&apikey=b8d85a5").then( (d)=>d.json()).then ( (d)=> console.log(d));
 }
 </script>
 
